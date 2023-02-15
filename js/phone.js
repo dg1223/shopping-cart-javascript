@@ -17,6 +17,8 @@ document
       iphone11Black128gbPrice,
       newCaseNumber
     );
+
+    updateSubtotal("subtotal", "tax", "total", "phone-price", "case-price");
   });
 
 // Minus button: iPhone
@@ -36,4 +38,6 @@ document
       iphone11Black128gbPrice,
       newCaseNumber
     );
+
+    updateSubtotal("subtotal", "tax", "total", "phone-price", "case-price");
   });

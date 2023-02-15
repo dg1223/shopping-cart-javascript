@@ -48,4 +48,31 @@ function updateTextFieldNumber(
 
   const newNumber = basePrice * inputFieldNumber;
   numberField.innerText = newNumber;
+
+  return newNumber;
+}
+
+function updateSubtotal(
+  subtotalElementID,
+  taxElementID,
+  totalElementID,
+  phoneElementID,
+  caseElementID,
+  fieldType
+) {
+  const subtotalField = document.getElementById(subtotalElementID);
+  const taxField = document.getElementById(taxElementID);
+  const totalField = document.getElementById(totalElementID);
+
+  const phoneTotal = getElementValue(phoneElementID, "text");
+  const caseTotal = getElementValue(caseElementID, "text");
+
+  const newSubTotal = phoneTotal + caseTotal;
+  subtotalField.innerText = newSubTotal;
+
+  const newTax = newSubTotal * 0.15;
+  taxField.innerText = newTax.toFixed(2);
+
+  const newTotal = newSubTotal + newTax;
+  totalField.innerText = newTotal;
 }

@@ -23,6 +23,8 @@ document.getElementById("btn-case-plus").addEventListener("click", function () {
     iphone11SiliconeBlackCasePrice,
     newCaseNumber
   );
+
+  updateSubtotal("subtotal", "tax", "total", "phone-price", "case-price");
 });
 
 // Minus button: iPhone case
@@ -42,4 +44,6 @@ document
       iphone11SiliconeBlackCasePrice,
       newCaseNumber
     );
+
+    updateSubtotal("subtotal", "tax", "total", "phone-price", "case-price");
   });
