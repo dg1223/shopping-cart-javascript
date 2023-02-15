@@ -52,7 +52,7 @@ function updateTextFieldNumber(
   return newNumber;
 }
 
-function updateSubtotal(
+function updateTotal(
   subtotalElementID,
   taxElementID,
   totalElementID,
@@ -70,7 +70,7 @@ function updateSubtotal(
   const newSubTotal = phoneTotal + caseTotal;
   subtotalField.innerText = newSubTotal;
 
-  const newTax = newSubTotal * 0.15;
+  const newTax = newSubTotal * 0.13;
   taxField.innerText = newTax.toFixed(2);
 
   const newTotal = newSubTotal + newTax;

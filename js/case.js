@@ -24,7 +24,7 @@ document.getElementById("btn-case-plus").addEventListener("click", function () {
     newCaseNumber
   );
 
-  updateSubtotal("subtotal", "tax", "total", "phone-price", "case-price");
+  updateTotal("subtotal", "tax", "total", "phone-price", "case-price");
 });
 
 // Minus button: iPhone case
@@ -45,5 +45,5 @@ document
       newCaseNumber
     );
 
-    updateSubtotal("subtotal", "tax", "total", "phone-price", "case-price");
+    updateTotal("subtotal", "tax", "total", "phone-price", "case-price");
   });

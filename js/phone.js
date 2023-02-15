@@ -18,7 +18,7 @@ document
       newCaseNumber
     );
 
-    updateSubtotal("subtotal", "tax", "total", "phone-price", "case-price");
+    updateTotal("subtotal", "tax", "total", "phone-price", "case-price");
   });
 
 // Minus button: iPhone
@@ -39,5 +39,5 @@ document
       newCaseNumber
     );
 
-    updateSubtotal("subtotal", "tax", "total", "phone-price", "case-price");
+    updateTotal("subtotal", "tax", "total", "phone-price", "case-price");
   });
