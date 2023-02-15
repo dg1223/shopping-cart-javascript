@@ -6,59 +6,7 @@
 5. Set the value to the case number field
 */
 
-function getElementValue(elementID, fieldType) {
-  const elementField = document.getElementById(elementID);
-
-  let elementFieldString;
-
-  if (fieldType === "text") {
-    elementFieldString = elementField.innerText;
-  } else if (fieldType === "input") {
-    elementFieldString = elementField.value;
-  } else {
-    return "TypeError: Enter either 'text' or 'input' as arguments.";
-  }
-
-  // keeping it simple with int
-  const elementFieldValue = parseInt(elementFieldString);
-
-  return elementFieldValue;
-}
-
-function updateInputFieldNumber(isIncrease, elementID, fieldType) {
-  const previousNumber = getElementValue(elementID, fieldType);
-  const numberField = document.getElementById(elementID);
-
-  // Do not let users generate negative numbers
-  if (previousNumber === 0 && !isIncrease) {
-    return previousNumber;
-  }
-
-  if (isIncrease) {
-    newNumber = previousNumber + 1;
-  } else {
-    newNumber = previousNumber - 1;
-  }
-  numberField.value = newNumber;
-
-  return newNumber;
-}
-
-function updateTextFieldNumber(
-  isIncrease,
-  elementID,
-  fieldType,
-  basePrice,
-  inputFieldNumber
-) {
-  const numberField = document.getElementById(elementID);
-
-  const newNumber = basePrice * inputFieldNumber;
-  numberField.innerText = newNumber;
-}
-
 const iphone11SiliconeBlackCasePrice = 59;
-const iphone11Black128gbPrice = 1219;
 
 // Plus button: iPhone case
 document.getElementById("btn-case-plus").addEventListener("click", function () {
